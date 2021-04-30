@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/hourlyForecastItemSizeHWidth"
+    android:layout_height="@dimen/hourlyForecastItemSizeHeight"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/smallest_text_size"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="@dimen/hourlyForecastImageSize"
+        android:layout_height="@dimen/hourlyForecastImageSize"
+        app:layout_constraintTop_toBottomOf="@id/timeView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/temperatureView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/smallest_text_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/weatherIcon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

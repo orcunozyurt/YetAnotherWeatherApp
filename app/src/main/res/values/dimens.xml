@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_smallest">5dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium">20dp</dimen>
+    <dimen name="margin_large">40dp</dimen>
+    <dimen name="small_icon_size">20dp</dimen>
+    <dimen name="medium_icon_size">50dp</dimen>
+    <dimen name="large_icon_size">80dp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="dailyForecastItemSize">200dp</dimen>
+    <dimen name="hourlyForecastItemSizeHeight">100dp</dimen>
+    <dimen name="hourlyForecastItemSizeHWidth">60dp</dimen>
+    <dimen name="hourlyForecastImageSize">50dp</dimen>
+
+    <dimen name="smallest_text_size">12sp</dimen>
+    <dimen name="small_text_size">16sp</dimen>
+    <dimen name="medium_text_size">20sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+    <dimen name="largest_text_size">30sp</dimen>
+
+
+</resources>

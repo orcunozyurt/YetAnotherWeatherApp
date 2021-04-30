@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YetAnotherWeatherApp</string>
+    <string name="temperature_title">Temperature</string>
+    <string name="feels_like_title">Feels Like</string>
+    <string name="pressure_title">Pressure</string>
+    <string name="humidity_title">Humidity</string>
+    <string name="wind_speed_title">Wind Speed</string>
+    <string name="wind_degree_title">Wind Degree</string>
+</resources>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/forest"
+    tools:context=".screens.detail.DetailFragment">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_temperature"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        android:layout_margin="@dimen/margin_medium"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/temperature_title"/>
+
+            <TextView
+                android:id="@+id/temperatureView"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/largest_text_size"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_feels_like"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/feels_like_title"/>
+
+            <TextView
+                android:id="@+id/feelsLikeView"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/largest_text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_weather"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/card_view_temperature"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/weather_title"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/large_text_size" />
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="@dimen/hourlyForecastImageSize"
+                android:layout_height="@dimen/hourlyForecastImageSize"/>
+
+            <TextView
+                android:id="@+id/weather_desc"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_pressure_humidity"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/card_view_feels_like"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/pressure_title"/>
+
+            <TextView
+                android:id="@+id/pressure_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/largest_text_size"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/humidity_title"/>
+
+            <TextView
+                android:id="@+id/humidity_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/largest_text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_wind"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/card_view_weather"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/wind_speed_title"/>
+
+            <TextView
+                android:id="@+id/wind_speed_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/largest_text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/large_text_size"
+                android:text="@string/wind_degree_title"/>
+
+            <TextView
+                android:id="@+id/wind_degree_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/largest_text_size"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_interpret"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".42"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/card_view_pressure_humidity"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/semiTransparentDark"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/interpretation_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/largest_text_size" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_gravity="center"
+                android:id="@+id/animation_view"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:lottie_rawRes="@raw/sunny_rainy"
+                app:lottie_autoPlay="true"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

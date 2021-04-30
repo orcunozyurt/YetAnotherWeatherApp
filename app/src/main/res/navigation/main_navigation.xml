@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/forecastFragment">
+
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.nerdz.yetanotherweatherapp.screens.forecast.ForecastFragment"
+        tools:layout="@layout/fragment_forecast" >
+        <action
+            android:id="@+id/action_forecastFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.nerdz.yetanotherweatherapp.screens.detail.DetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="atHourData"
+            app:argType="com.nerdz.yetanotherweatherapp.models.Data" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
